@@ -31,4 +31,17 @@ public class PasswordValidationTest {
     assertFalse(validate);
   }
 
+  @Test
+  @DisplayName("When Password contains no numbers the password should be invalid")
+  public void checkPasswordNumbers(){
+    //GIVEN
+    String password = "sadf$frt";
+
+    //WHEN
+    boolean validate = PasswordValidation.validate(password);
+
+    //THEN
+    assertFalse(validate);
+  }
+
 }
