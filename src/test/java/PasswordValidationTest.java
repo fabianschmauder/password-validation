@@ -44,4 +44,17 @@ public class PasswordValidationTest {
     assertFalse(validate);
   }
 
+  @Test
+  @DisplayName("When Password contains no lower case character the password should be invalid")
+  public void checkPasswordLowerCase(){
+    //GIVEN
+    String password = "SA3F$FRT";
+
+    //WHEN
+    boolean validate = PasswordValidation.validate(password);
+
+    //THEN
+    assertFalse(validate);
+  }
+
 }

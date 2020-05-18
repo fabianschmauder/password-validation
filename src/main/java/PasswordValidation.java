@@ -10,6 +10,11 @@ public class PasswordValidation {
       return false;
     }
 
+    if(!password.matches(".*[a-z].*")){
+      System.out.println("No lower case character");
+      return false;
+    }
+
     return true;
   }
 }
